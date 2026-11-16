@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>1970 泰源事件：山海交界的自由約定｜互動歷史推進導覽</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --ink-black: #2C2A29;
+      --sage-green: #E2ECE4;
+      --coral-pink: #E8998D;
+      --warm-yellow: #F7E8C4;
+      --ocean-blue: #D9E4EC;
+      --font-scale: 1;
+    }
+
+    body {
+      background-color: #E5E0D5;
+      color: var(--ink-black);
+      font-family: 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
+    }
+
+    /* 長輩大字模式縮放控制 */
+    body.large-text-mode {
+      --font-scale: 1.18;
+    }
+    .scale-text-xs { font-size: calc(0.76rem * var(--font-scale)); line-height: 1.45; }
+    .scale-text-sm { font-size: calc(0.88rem * var(--font-scale)); line-height: 1.6; }
+    .scale-text-base { font-size: calc(1rem * var(--font-scale)); line-height: 1.7; }
+    .scale-text-lg { font-size: calc(1.16rem * var(--font-scale)); line-height: 1.45; }
+    .scale-text-xl { font-size: calc(1.32rem * var(--font-scale)); line-height: 1.35; }
+
+    /* 手機版置中容器 */
+    .phone-frame {
+      max-width: 520px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: var(--bg-cream);
+      border-left: 3px solid var(--ink-black);
+      border-right: 3px solid var(--ink-black);
+      box-shadow: 0 12px 40px rgba(44, 42, 41, 0.18);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 108px;
+    }
+
+    @media (max-width: 540px) {
+      .phone-frame {
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    /* 奶油手繪風粗黑框與立體硬陰影 */
+    .sketch-box {
+      border: 2.5px solid var(--ink-black);
+      border-radius: 18px;
+      box-shadow: 4px 4px 0px var(--ink-black);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+    }
+
+    .sketch-btn:active:not(:disabled) {
+      transform: translate(2px, 2px);
+      box-shadow: 1.5px 1.5px 0px var(--ink-black);
+    }
+
+    .sketch-btn:hover:not(:disabled) {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0px var(--ink-black);
+    }
+
+    .sketch-pill {
+      border: 2px solid var(--ink-black);
+      border-radius: 9999px;
+      box-shadow: 2px 2px 0px var(--ink-black);
+    }
+
+    /* 手繪螢光筆底線 */
+    .highlight-coral {
+      display: inline;
+      background-image: linear-gradient(transparent 60%, #F5C2B8 60%);
+      background-repeat: no-repeat;
+      background-size: 100% 95%;
+      padding: 0 2px;
+    }
+
+    .highlight-yellow {
+      display: inline;
+      background-image: linear-gradient(transparent 58%, #F7E09E 58%);
+      background-repeat: no-repeat;
+      background-size: 100% 95%;
+      padding: 0 2px;
+    }
+
+    .highlight-blue {
+      display: inline;
+      background-image: linear-gradient(transparent 60%, #C5DCEB 60%);
+      background-repeat: no-repeat;
+      background-size: 100% 95%;
+      padding: 0 2px;
+    }
+
+    /* 進度軸上方移動小標誌動畫 */
+    .stepper-mascot {
+      transition: left 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* 換幕淡入與微幅上浮動畫 */
+    @keyframes stageReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.99);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .stage-animate {
+      animation: stageReveal 0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* 復古檔案夾格紋紙 */
+    .archive-paper {
+      background-color: #FFFDF7;
+      background-image: linear-gradient(transparent 94%, #E7DEC8 94%);
+      background-size: 100% 1.9rem;
+      border: 2px dashed var(--ink-black);
+      border-radius: 14px;
+    }
+
+    @keyframes pulseSpeaking {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    .speaking-active {
+      animation: pulseSpeaking 1.1s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="phone-frame" id="appContainer">
+    <!-- 頂部專題橫幅 -->
+    <div class="bg-[#2C2A29] text-[#FAF7F2] px-4 py-1.5 flex items-center justify-between">
+      <span class="scale-text-xs font-bold tracking-wider">台東 ➔ 綠島｜四日慢旅核心歷史事件導覽</span>
+      <span class="scale-text-xs font-mono text-[#F7E8C4]" id="topProgressBadge">STAGE 1 / 7</span>
+    </div>
+
+    <!-- 頂部主標題與工具按鈕列 -->
+    <header class="px-4 pt-3.5 pb-3 border-b-[2.5px] border-[#2C2A29] bg-[#FAF7F2] sticky top-0 z-30">
+      <div class="flex items-start justify-between gap-2 mb-3">
+        <div>
+          <h1 class="scale-text-lg font-black text-[#2C2A29] leading-tight">
+            1970 泰源事件：互動歷史時間軸
+          </h1>
+          <p class="scale-text-xs font-bold text-[#6E6A66] mt-0.5">
+            👇 按一下推進時間，走進山海交界的自由約定
+          </p>
+        </div>
+
+        <!-- 右上角兩顆工具按鈕：人物關係表 & 大字模式 -->
+        <div class="flex items-center gap-1.5 shrink-0">
+          <button onclick="openCastModal()" class="sketch-pill sketch-btn bg-[#F7E8C4] px-2.5 py-1.5 scale-text-xs font-black text-[#2C2A29] flex items-center gap-1" title="查看泰源事件人物關係網">
+            <span>👥</span>
+            <span>人物表</span>
+          </button>
+          <button id="largeTextBtn" onclick="toggleLargeText()" class="sketch-pill sketch-btn bg-[#E2ECE4] px-2.5 py-1.5 scale-text-xs font-black text-[#2C2A29] flex items-center gap-1" title="切換長輩適讀大字體">
+            <span>🔍</span>
+            <span id="largeTextLabel">大字</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 7 幕水平進度軸 (7-Step Interactive Stepper) -->
+      <div class="relative pt-6 pb-1 px-2 select-none">
+        <!-- 底層連線與動態填色進度條 -->
+        <div class="relative mx-4 h-[4px] bg-[#DDD6C7] rounded-full top-[11px] z-0 overflow-hidden border border-[#2C2A29]">
+          <div id="stepperFillBar" class="h-full bg-[#E8998D] transition-all duration-300" style="width: 0%;"></div>
+        </div>
+
+        <!-- 隨進度移動的手繪火種/小船圖示 -->
+        <div id="stepperMascot" class="stepper-mascot absolute top-[1px] z-20 -translate-x-1/2 pointer-events-none" style="left: 7.14%;">
+          <div class="px-1.5 py-0.5 rounded-md bg-[#2C2A29] text-[#FAF7F2] text-[10px] font-black shadow-sm whitespace-nowrap" id="mascotTag">
+            第 1 幕
+          </div>
+        </div>
+
+        <!-- 7 個可點擊的章節圓點 -->
+        <div class="grid grid-cols-7 relative z-10" id="stepperDotsContainer">
+          <!-- 由 JS 動態渲染 7 個圓點 -->
+        </div>
+      </div>
+    </header>
+
+    <!-- 主舞台內容區 (Story Stage) -->
+    <main class="px-4 pt-4 pb-6 flex-1" id="stageContainer">
+      <!-- 由 JS 根據當前幕次 (0~6) 動態渲染 -->
+    </main>
+
+    <!-- 已解鎖的歷史軌跡回顧折疊夾 (History Log) -->
+    <section class="px-4 pb-6">
+      <div class="sketch-box bg-[#EFECE4] p-3.5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="scale-text-xs font-black text-[#2C2A29] flex items-center gap-1.5">
+            <span>🧭</span>
+            <span>已推進的事件軌跡（點擊可快速跳回該幕）</span>
+          </span>
+          <span id="unlockedCountLabel" class="scale-text-xs font-bold text-[#6E6A66]">已解鎖 1 / 7</span>
+        </div>
+        <div id="historyBreadcrumbList" class="flex flex-wrap gap-1.5">
+          <!-- 由 JS 渲染已解鎖的章節小標籤 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部固定推進控制列 (Bottom Action Bar) -->
+    <footer class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[520px] bg-[#FAF7F2]/95 backdrop-blur-sm border-t-[2.5px] border-[#2C2A29] px-4 py-3 z-40">
+      <div class="flex items-center gap-2.5">
+        <!-- 上一幕按鈕 -->
+        <button id="prevStageBtn" onclick="prevStage()" class="sketch-box sketch-btn bg-white px-3.5 py-3 font-black scale-text-sm text-[#2C2A29] disabled:opacity-40 disabled:pointer-events-none shrink-0" aria-label="上一幕">
+          ⬅️ 上一幕
+        </button>
+
+        <!-- 主推進按鈕：按一下推進一次事件進度 -->
+        <button id="nextStageBtn" onclick="nextStage()" class="sketch-box sketch-btn flex-1 bg-[#E8998D] py-3 px-4 font-black scale-text-base text-[#2C2A29] flex items-center justify-center gap-2">
+          <span id="nextStageBtnText">👉 按一下推進下一幕 (1/7)</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== 彈出視窗：人物關係與演員表 (Cast Modal) ==================== -->
+  <div id="castModalBackdrop" class="fixed inset-0 bg-black/55 z-50 hidden flex items-center justify-center p-3 sm:p-4 backdrop-blur-[2px]" onclick="closeCastModal(event)">
+    <div class="sketch-box bg-[#FAF7F2] w-full max-w-[460px] max-h-[88vh] flex flex-col overflow-hidden" onclick="event.stopPropagation()">
+      <!-- Modal 標題列 -->
+      <div class="bg-[#F7E8C4] px-4 py-3.5 border-b-[2.5px] border-[#2C2A29] flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">👥</span>
+          <div>
+            <h2 class="scale-text-base font-black text-[#2C2A29]">1970 泰源事件：核心人物與關係網</h2>
+            <p class="scale-text-xs font-bold text-[#5A5652]">跨越鐵窗的政治犯與台東阿美族青年</p>
+          </div>
+        </div>
+        <button onclick="closeCastModal()" class="w-8 h-8 rounded-full bg-white border-2 border-[#2C2A29] font-black text-base flex items-center justify-center shadow-[0_2px_0_#2C2A29]">
+          ✕
+        </button>
+      </div>
+
+      <!-- 人物關係卡片列表 -->
+      <div class="p-4 overflow-y-auto space-y-3" id="castModalContent">
+        <!-- 由 JS 渲染 -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. 泰源事件 7 幕完整歷史資料庫 (零省略完整內建)
+    // =========================================================================
+    const TAIYUAN_STAGES = [
+      {
+        step: 1,
+        shortName: "山谷暗流",
+        actLabel: "第 1 幕｜起因與結盟",
+        title: "【山谷裡的暗流】跨越鐵窗的香菸與讀書聲",
+        timeBadge: "🗓️ 1960年代末",
+        locationBadge: "📍 台東東河・泰源幽谷（泰源感訓監獄）",
+        themeColor: "#E2ECE4", // 鼠尾草綠
+        svgScene: "scene1",
+        narrative: "泰源感訓監獄位在台東東河鄉三面環山的「泰源幽谷」，只有一條沿著馬武窟溪蜿蜒的聯外道路。這裡關押著許多具備軍人背景、思想最堅定的年輕政治犯。\n\n因為監獄需要受刑人到圍牆外種菜、墾荒（外役勞動），這群渴望自由的青年意外獲得了在山林間走動的機會。其中，海軍陸戰隊出身的「鄭金河」交際力極強，他經常拿香菸與日用品分給看守他們的「台東在地阿美族充員兵（警衛）」，還教他們讀書識字。在遠離台北威權中心的深山裡，政治犯與原住民青年建立起跨越鐵窗的深厚情誼。",
+        characters: [
+          { name: "鄭金河", role: "海軍陸戰隊出身｜負責公關與武力，與原民警衛稱兄道弟", color: "#F7E8C4" },
+          { name: "台東阿美族青年警衛", role: "在地徵調充員兵｜同情政治犯處境，成為計畫中的起義內應", color: "#E2ECE4" }
+        ],
+        archiveBox: {
+          title: "🔑 為什麼會在台東泰源結盟？",
+          content: "外役勞動讓受刑人得以走出高牆，而當時看守外圍的充員兵多為東海岸在地的阿美族青年。相較於高壓長官，政治犯待他們如親弟弟，讓自由與反抗的種子在山谷裡悄悄發芽。"
+        },
+        tourSpotHint: {
+          day: "Day 1 台東市區＆海濱公園",
+          desc: "旅程第一天，我們先在台東市區與海濱感受阿美族與原住民族樂天重義氣的生活文化，理解這群台東青年當年為何願意基於同情與正義感暗中相助。"
+        }
+      },
+      {
+        step: 2,
+        shortName: "點燃火種",
+        actLabel: "第 2 幕｜關鍵導火線",
+        title: "【點燃火種的導火線】海外傳來的驚天消息",
+        timeBadge: "🗓️ 1970年 1月",
+        locationBadge: "📍 泰源監獄外役農作區",
+        themeColor: "#F7E8C4", // 暖鵝黃
+        svgScene: "scene2",
+        narrative: "1970 年 1 月，一個震撼國際的消息秘密傳進了泰源監獄：原本在台灣遭到特務嚴密軟禁的台獨領袖「彭明敏教授」，竟然成功易容並逃亡抵達瑞典！\n\n這個消息讓陸軍官校出身的主策劃人「江炳興」與獄中難友們熱血沸騰！他們認為海外台灣人已經吹響號角，國際情勢大好，台灣島內絕對不能沉默。於是，他們決定將計就計，提早在大年初三發動「臺灣白色恐怖史上唯一一次武裝起義」，要在台東東海岸放一把火，與海外互相呼應！",
+        characters: [
+          { name: "江炳興", role: "陸軍官校生｜起義主導大腦，負責戰略與起草宣言", color: "#E8998D" },
+          { name: "施明德等獄中難友", role: "前期秘密參與討論｜共同構思武裝革命藍圖", color: "#D9E4EC" }
+        ],
+        archiveBox: {
+          title: "📜 史料解鎖：秘密起草之《臺灣獨立宣言》文稿",
+          content: "江炳興在獄中秘密以中、英、日文起草宣言，準備在奪下台東廣播電台後向全世界播送，宣告台灣人民追求自由與反抗獨裁的決心。"
+        },
+        tourSpotHint: {
+          day: "行前與火車旅途導讀",
+          desc: "從台北搭火車前往台東的路上，可以跟爸媽聊聊 1970 年代的台灣氛圍，想像這群二十多歲的年輕人如何在深山裡懷抱改變時代的夢想。"
+        }
+      },
+      {
+        step: 3,
+        shortName: "革命劇本",
+        actLabel: "第 3 幕｜起義前夕",
+        title: "【瘋狂卻悲壯的革命劇本】大年初三的四步險棋",
+        timeBadge: "🗓️ 1970年 2月8日 前夕",
+        locationBadge: "📍 泰源監獄合作社與農作區",
+        themeColor: "#D9E4EC", // 深海藍
+        svgScene: "scene3",
+        narrative: "江炳興、鄭金河、詹天增、謝東榮、陳良、鄭正成（後稱「泰源六君子」），利用各自在陸軍、海軍陸戰隊與通訊兵的軍事專長，擬定了大膽的四步革命劇本：\n\n①【刺殺與奪槍】趁大年初三上午警衛換哨、戒備最鬆懈時，無聲制伏大門衛兵班長，奪取彈藥庫。\n②【裡應外合】與同情他們的「原住民警衛」合作，打開牢房釋放全部約 400 名政治犯，組成革命軍。\n③【佔領電台】衝下山佔領「中廣台東廣播電台」，由江炳興向全世界廣播《臺灣獨立宣言》。\n④【死守東海岸】奪取台東港軍艦，或炸毀聯外的「舊東河橋」，在海岸山脈與軍隊打游擊戰！",
+        characters: [
+          { name: "泰源六君子", role: "江炳興、鄭金河、詹天增、謝東榮、陳良、鄭正成", color: "#E8998D" }
+        ],
+        interactiveChoice: {
+          question: "🤔 歷史推演小思考：如果你是當年的策劃者，這四步計畫裡「哪一個環節」最容易出意外？",
+          options: [
+            "① 第一步：大門奪槍必須「完全無聲」，一旦衛兵呼救就會驚動整座軍營",
+            "② 第三步：佔領台東廣播電台時找不到播音設備",
+            "③ 第四步：東海岸山區地形太複雜容易迷路"
+          ],
+          correctIndex: 0,
+          revealText: "💡 關鍵點破：正是第一步！泰源監獄駐有整連武裝警衛，奪取彈藥庫的前提是「悄無聲息制伏衛兵班長」。只要發出一點呼救聲，警報就會響起，後面三步將全盤瓦解……而歷史偏偏就在這一刻轉了彎。"
+        },
+        tourSpotHint: {
+          day: "Day 2 舊東河橋風景區",
+          desc: "站在橫跨馬武窟溪的「舊東河橋」上，爸媽一眼就能看懂泰源盆地易守難攻的地形，明白當年為何這裡是進入泰源幽谷的唯一咽喉！"
+        }
+      },
+      {
+        step: 4,
+        shortName: "致命慘叫",
+        actLabel: "第 4 幕｜行動爆發",
+        title: "【大年初三 11:45 的致命慘叫】劇本外的驚天突圍",
+        timeBadge: "🗓️ 1970年 2月8日 11:30–12:00",
+        locationBadge: "📍 泰源監獄大門衛兵哨",
+        themeColor: "#F5C2B8", // 警戒珊瑚紅
+        svgScene: "scene4",
+        narrative: "1970 年 2 月 8 日（農曆大年初三）上午 11:30，行動正式開始！六人利用外役勞動的機會，自然地走近大門衛兵哨。\n\n11:45，江炳興與鄭金河上前假裝與警衛班長賴繩武閒聊拜年，隨後迅速掏出預藏的利器刺向班長，試圖安靜將他制伏。沒想到賴繩武反應極快，負傷後奮力抵抗並放聲大叫呼救！\n\n這聲慘叫瞬間驚動了整座監獄的駐軍，刺耳警報大作、哨塔機槍上膛，彈藥庫立刻被重兵封鎖！眼看已經無法奪取大批武器、更不可能回頭打開牢房釋放 400 名難友，六人為了不牽連獄中同伴，當機立斷搶了衛兵的幾把步槍與子彈，轉身衝入泰源幽谷的深山叢林！",
+        characters: [
+          { name: "江炳興＆鄭金河", role: "突襲先鋒｜計畫敗露後當機立斷帶隊突圍入山", color: "#E8998D" },
+          { name: "賴繩武", role: "警衛班長｜遇刺後激烈反抗大聲呼救，驚動全營駐軍", color: "#F7E8C4" }
+        ],
+        archiveBox: {
+          title: "⚡ 生死一瞬間的抉擇",
+          content: "在短短 15 分鐘內，原本「釋放 400 人佔領台東」的宏大起義，被迫變成 6 個年輕人帶著幾把步槍與百餘發子彈的絕命深山逃亡。"
+        },
+        tourSpotHint: {
+          day: "Day 2 泰源幽谷／登仙橋休憩區",
+          desc: "我們在 Day 2 下午搭乘預約專車進入台 23 線泰源幽谷，在登仙橋與泰源村遠眺前泰源感訓監獄方向，重回 1970 年大年初三那場驚心動魄的突圍現場。"
+        }
+      },
+      {
+        step: 5,
+        shortName: "山林圍捕",
+        actLabel: "第 5 幕｜山海悲歌",
+        title: "【東海岸山林的萬人圍捕】最心碎的叢林追逐",
+        timeBadge: "🗓️ 1970年 2月中旬（逃亡12天）",
+        locationBadge: "📍 都蘭山區與東海岸叢林",
+        themeColor: "#E2ECE4",
+        svgScene: "scene5",
+        narrative: "泰源監獄爆發武裝奪槍逃亡的消息傳回台北，蔣介石政府震驚震怒！當局立刻下令調動海、陸、空三軍與警察上萬人，將台東東海岸與海岸山脈全面封鎖。\n\n然而，整起事件中最令人心碎與諷刺的一幕發生了：政府開出天價懸賞金，並強制動員最熟悉山林地形的「台東在地原住民獵人與青年」組成搜山隊。\n\n在飢寒交迫的都蘭山區裡，有些善良的原住民村民冒著生命危險偷偷塞飯糰、給他們指路；但同時，威權體制卻逼迫原住民去圍捕這群原本想跟原住民結盟爭取自由的政治犯。逃亡不到兩週，六人在彈盡援絕下陸續於山區與海邊全數落網。",
+        characters: [
+          { name: "逃亡六君子", role: "在東海岸山林飢寒交迫逃亡十餘日，堅不傷及無辜百姓", color: "#E8998D" },
+          { name: "東海岸阿美族村民", role: "歷史的無奈交織｜有人冒險送飯藏匿，也有人被迫參與搜山", color: "#E2ECE4" }
+        ],
+        archiveBox: {
+          title: "💔 威權體制下的族群操弄",
+          content: "在泰源裡，政治犯與原住民青年是渴望自由的盟友；在泰源外，國家機器卻利用懸賞與軍令驅使原住民搜捕政治犯，成為東海岸最令人嘆息的歷史記憶。"
+        },
+        tourSpotHint: {
+          day: "Day 2 新東糖廠（都蘭糖廠）與都蘭部落",
+          desc: "漫步在背靠都蘭山、面向太平洋的都蘭部落，一邊喝著台東紅烏龍茶，一邊聽這段發生在後山叢林裡的真實逃亡與原民溫情故事。"
+        }
+      },
+      {
+        step: 6,
+        shortName: "扛下所有",
+        actLabel: "第 6 幕｜氣節與犧牲",
+        title: "【一人扛下所有】絕不牽連難友與原住民朋友",
+        timeBadge: "🗓️ 1970年 5月30日",
+        locationBadge: "📍 軍法看守所 ➔ 新店安坑刑場",
+        themeColor: "#F7E8C4",
+        svgScene: "scene6",
+        narrative: "六人被捕後，在審訊室裡遭受了極為殘酷的刑求。特務與軍法官不斷逼問：「監獄裡還有誰是同謀？施明德有沒有參與？哪幾個原住民警衛是你們的內應？」\n\n面對酷刑，江炳興、鄭金河、詹天增、謝東榮、陳良五人展現了令人動容的骨氣！他們一致咬死：「所有計畫從頭到尾只有我們自己幹的！」一字不提獄中參與討論的其他難友，更絕口不牽連任何一位同情、幫助過他們的台東原住民青年警衛與村民，把所有死罪全數扛在自己肩上。\n\n1970 年 5 月 30 日，江炳興等五人在新店安坑刑場被槍決（後稱「泰源五烈士」）；僅負責外圍接應、未直接參與刺殺的鄭正成被判處 15 年半有期徒刑，成為唯一倖存者。",
+        characters: [
+          { name: "泰源五烈士", role: "江炳興、鄭金河、詹天增、謝東榮、陳良｜一人扛罪保全眾人", color: "#E8998D" },
+          { name: "鄭正成", role: "唯一倖存者｜見證泰源起義始末並留下珍貴歷史口述", color: "#D9E4EC" }
+        ],
+        archiveBox: {
+          title: "📜 史料解鎖：泰源五烈士遺書與最後留影",
+          content: "行刑前，五位年輕人換上整齊衣服，沒有恐懼與懊悔。他們用生命守住了對獄中難友與台東原住民朋友的承諾，保全了數十個家庭免於遭受牽連。"
+        },
+        tourSpotHint: {
+          day: "Day 2 傍晚返回台東市區／富岡漁港",
+          desc: "理解了五烈士「寧死不牽連朋友」的氣節，這個故事不再只是冰冷的悲劇，而是人性中最溫暖、最重情重義的光輝。"
+        }
+      },
+      {
+        step: 7,
+        shortName: "跨海綠島",
+        actLabel: "第 7 幕｜歷史的因果迴響",
+        title: "【恐懼築起的高牆】為什麼我們第 3 天要搭船去綠島？",
+        timeBadge: "🗓️ 1972年 至今",
+        locationBadge: "📍 台東富岡漁港 ➔ 綠島「綠洲山莊」",
+        themeColor: "#D9E4EC",
+        svgScene: "scene7",
+        narrative: "泰源事件雖然失敗了，卻徹底嚇壞了當年的威權政府！當局驚覺：「把政治犯關在台灣本島太危險了！他們竟然會在勞動時跟當地原住民結盟造反！」\n\n為了徹底斬斷政治犯與台灣土地、原住民人群的接觸，政府緊急在孤懸海外的綠島，趕工興建了一座高牆聳立、全封閉式的八卦樓監獄——「綠洲山莊」。1972 年，所有關押在台東泰源監獄的政治犯，全數被戴上手銬腳鐐，從台東搭船跨海移監到綠島鎖進牢房。\n\n這就是為什麼我們的四天三夜旅行，要從台東市區、東海岸泰源幽谷，一路跨海追尋到綠島！當我們和爸媽站在綠島的八卦樓與海邊的垂淚碑前，吹著太平洋自由的海風，我們正見證著那場在山海之間、終於實現的自由約定。",
+        characters: [
+          { name: "跨海移監之政治犯群像", role: "1972 年由台東泰源移送綠島「綠洲山莊」高牆牢房", color: "#D9E4EC" },
+          { name: "綠島人權紀念碑（垂淚碑）", role: "柏楊碑文：紀念那個時代為孩子長夜哭泣的母親", color: "#F7E8C4" }
+        ],
+        archiveBox: {
+          title: "🏛️ 史料解鎖：1972 年國防部綠洲山莊興建與移監檔案",
+          content: "綠島之所以會有高牆封閉式的「綠洲山莊（八卦樓）」，直接原因就是 1970 年台東的泰源事件！這兩座一山一海的建築，構成了台灣人權史最完整的因果鏈。"
+        },
+        tourSpotHint: {
+          day: "Day 3–4 富岡漁港 ➔ 綠島綠洲山莊＆人權紀念碑",
+          desc: "帶著前兩天在台東泰源的故事記憶搭船登上綠島，爸媽走進綠洲山莊時將不再只是走馬看花，而是能一眼看懂整段歷史的來龍去脈！"
+        },
+        isFinalStage: true
+      }
+    ];
+
+    // 人物關係網彈窗資料
+    const CAST_RELATIONS = [
+      {
+        group: "🔥 起義核心：泰源六君子",
+        badge: "武裝行動者",
+        bg: "#F5C2B8",
+        desc: "由【江炳興】（陸軍官校生，負責主導戰略與起草宣言）、【鄭金河】（海軍陸戰隊，負責結交原民警衛與奪槍）、【詹天增】（海軍陸戰隊）、【謝東榮】、【陳良】與【鄭正成】（唯一倖存者）組成。六人皆具軍事背景，失敗後一人扛下所有罪名，絕不供出獄中難友與原住民朋友。"
+      },
+      {
+        group: "🌿 關鍵交集：台東在地阿美族青年（警衛與村民）",
+        badge: "山谷裡的朋友",
+        bg: "#E2ECE4",
+        desc: "當時泰源監獄外圍警衛多為台東在地徵調的阿美族充員兵。鄭金河平時常分送香菸物資、教他們讀書，讓這群原住民青年基於同情與正義感，成為起義計畫的「內應」。事件爆發後，當局卻懸賞逼迫在地原住民組成搜山隊圍捕六人，展現威權體制下最令人心碎的族群無奈。"
+      },
+      {
+        group: "🤫 獄中未曝光同謀：施明德與泰源政治犯",
+        badge: "被保全的難友",
+        bg: "#F7E8C4",
+        desc: "泰源起義前期其實有許多獄中政治犯（包含施明德等人）參與思想與戰略討論。大年初三行動敗露後，六君子為了不牽連獄中 400 名難友，毅然往山林突圍，並在刑求時咬死沒有其他同謀。1972 年，這群倖存政治犯被全數跨海移監至綠島「綠洲山莊」。"
+      },
+      {
+        group: "🧱 威權體制：從泰源感訓監獄到綠島綠洲山莊",
+        badge: "空間與監控升級",
+        bg: "#D9E4EC",
+        desc: "1970 年大年初三衛兵班長賴繩武遇刺呼救，驚動駐軍導致起義失敗。蔣介石政府調動萬人封鎖東海岸，並驚覺「本島山區監獄容易讓政治犯與原住民結盟」，遂於綠島趕建全封閉八卦樓監獄「綠洲山莊」，促成了從台東到綠島的歷史轉折。"
+      }
+    ];
+
+    // =========================================================================
+    // 2. 狀態管理與初始化
+    // =========================================================================
+    let currentStepIndex = 0; // 0 ~ 6
+    let maxUnlockedIndex = 0; // 記錄使用者已推進到的最高幕次
+    let isLargeText = false;
+    let isSpeaking = false;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderStepperDots();
+      renderStage(0);
+      renderCastModalContent();
+
+      // 支援鍵盤左右方向鍵推進
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextStage();
+        if (e.key === 'ArrowLeft') prevStage();
+      });
+    });
+
+    // =========================================================================
+    // 3. 每一幕專屬的手繪風 SVG 情境插圖產生器 (7 幅原創手繪 SVG)
+    // =========================================================================
+    function getSceneSVG(sceneKey) {
+      switch (sceneKey) {
+        case 'scene1':
+          // 第1幕：泰源幽谷群山、鐵絲網與跨越鐵窗遞出的香菸/書本
+          return `
+            <svg class="w-full h-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="160" rx="12" fill="#E2ECE4"/>
+              <circle cx="340" cy="36" r="18" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.5"/>
+              <path d="M0 135L75 55L155 135H0Z" fill="#B8D0BF" stroke="#2C2A29" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M110 135L210 42L310 135H110Z" fill="#9BBBA4" stroke="#2C2A29" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M250 135L335 65L400 135H250Z" fill="#B8D0BF" stroke="#2C2A29" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- 象徵鐵窗與雙手情誼的中心徽章 -->
+              <rect x="135" y="48" width="130" height="72" rx="12" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <line x1="200" y1="48" x2="200" y2="120" stroke="#2C2A29" stroke-width="2.5" stroke-dasharray="4 4"/>
+              <rect x="152" y="68" width="34" height="36" rx="4" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2"/>
+              <path d="M160 80H178M160 88H174" stroke="#2C2A29" stroke-width="2" stroke-linecap="round"/>
+              <rect x="214" y="76" width="34" height="14" rx="4" fill="#E8998D" stroke="#2C2A29" stroke-width="2"/>
+              <path d="M252 72C256 68 256 62 252 58" stroke="#2C2A29" stroke-width="2" stroke-linecap="round"/>
+              <rect x="0" y="132" width="400" height="28" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="200" y="150" text-anchor="middle" fill="#2C2A29" font-size="12" font-weight="900">台東東河・泰源幽谷外役勞動與原民情誼</text>
+            </svg>`;
+        case 'scene2':
+          // 第2幕：飛向海外瑞典的飛機與獄中秘密點燃的《臺灣獨立宣言》火種
+          return `
+            <svg class="w-full h-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="160" rx="12" fill="#F7E8C4"/>
+              <path d="M35 85C95 40 180 35 265 45" stroke="#2C2A29" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>
+              <!-- 飛機 -->
+              <path d="M265 32L305 42L275 56L272 46L255 48L265 32Z" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5" stroke-linejoin="round"/>
+              <!-- 宣言卷軸與火苗 -->
+              <rect x="145" y="54" width="110" height="68" rx="8" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <path d="M162 72H238M162 86H238M162 100H215" stroke="#2C2A29" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M95 108C95 92 112 80 112 66C124 78 130 92 125 108C121 118 100 118 95 108Z" fill="#E8998D" stroke="#2C2A29" stroke-width="2.5"/>
+              <rect x="0" y="132" width="400" height="28" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="200" y="150" text-anchor="middle" fill="#2C2A29" font-size="12" font-weight="900">1970年1月・彭明敏逃亡瑞典點燃起義火種</text>
+            </svg>`;
+        case 'scene3':
+          // 第3幕：四步作戰地圖（監獄 ➔ 牢房 ➔ 電台廣播塔 ➔ 舊東河橋）
+          return `
+            <svg class="w-full h-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="160" rx="12" fill="#D9E4EC"/>
+              <path d="M55 78H345" stroke="#2C2A29" stroke-width="3" stroke-dasharray="5 5"/>
+              <!-- 節點1 奪槍 -->
+              <circle cx="65" cy="78" r="24" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="65" y="74" text-anchor="middle" fill="#2C2A29" font-size="10" font-weight="900">STEP 1</text>
+              <text x="65" y="88" text-anchor="middle" fill="#D9534F" font-size="11" font-weight="900">無聲奪槍</text>
+              <!-- 節點2 釋放400人 -->
+              <circle cx="155" cy="78" r="24" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="155" y="74" text-anchor="middle" fill="#2C2A29" font-size="10" font-weight="900">STEP 2</text>
+              <text x="155" y="88" text-anchor="middle" fill="#2C2A29" font-size="11" font-weight="900">釋放難友</text>
+              <!-- 節點3 佔領電台 -->
+              <circle cx="245" cy="78" r="24" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="245" y="74" text-anchor="middle" fill="#2C2A29" font-size="10" font-weight="900">STEP 3</text>
+              <text x="245" y="88" text-anchor="middle" fill="#2C2A29" font-size="11" font-weight="900">電台廣播</text>
+              <!-- 節點4 東海岸游擊 -->
+              <circle cx="335" cy="78" r="24" fill="#E2ECE4" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="335" y="74" text-anchor="middle" fill="#2C2A29" font-size="10" font-weight="900">STEP 4</text>
+              <text x="335" y="88" text-anchor="middle" fill="#2C2A29" font-size="11" font-weight="900">山海游擊</text>
+              <rect x="0" y="132" width="400" height="28" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="200" y="150" text-anchor="middle" fill="#2C2A29" font-size="12" font-weight="900">泰源六君子・大年初三革命四步計畫藍圖</text>
+            </svg>`;
+        case 'scene4':
+          // 第4幕：11:45 警鐘大作與衝向山林的突圍箭頭
+          return `
+            <svg class="w-full h-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="160" rx="12" fill="#F5C2B8"/>
+              <!-- 警報閃電光芒 -->
+              <path d="M200 18L212 42L238 34L222 58L248 72L218 80L228 106L200 88L172 106L182 80L152 72L178 58L162 34L188 42L200 18Z" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.5" stroke-linejoin="round"/>
+              <rect x="155" y="50" width="90" height="36" rx="8" fill="#2C2A29"/>
+              <text x="200" y="74" text-anchor="middle" fill="#FAF7F2" font-family="monospace" font-size="19" font-weight="900">11:45 AM</text>
+              <rect x="0" y="132" width="400" height="28" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="200" y="150" text-anchor="middle" fill="#B83B2B" font-size="12" font-weight="900">大年初三衛兵呼救・警報大作被迫突圍入山</text>
+            </svg>`;
+        case 'scene5':
+          // 第5幕：都蘭山林與探照燈搜捕網
+          return `
+            <svg class="w-full h-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="160" rx="12" fill="#2C2A29"/>
+              <!-- 探照燈光束 -->
+              <polygon points="40,0 135,132 215,132" fill="#F7E8C4" fill-opacity="0.35"/>
+              <polygon points="360,0 195,132 285,132" fill="#F7E8C4" fill-opacity="0.35"/>
+              <!-- 重疊山巒 -->
+              <path d="M0 132L90 48L185 132H0Z" fill="#5C7A67" stroke="#FAF7F2" stroke-width="2"/>
+              <path d="M120 132L225 38L330 132H120Z" fill="#3F5948" stroke="#FAF7F2" stroke-width="2"/>
+              <path d="M240 132L335 56L400 132H240Z" fill="#5C7A67" stroke="#FAF7F2" stroke-width="2"/>
+              <circle cx="225" cy="95" r="8" fill="#E8998D" stroke="#FAF7F2" stroke-width="2"/>
+              <rect x="0" y="132" width="400" height="28" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="200" y="150" text-anchor="middle" fill="#2C2A29" font-size="12" font-weight="900">東海岸萬人封鎖線・山林裡的無奈圍捕</text>
+            </svg>`;
+        case 'scene6':
+          // 第6幕：五朵自由百合花與不屈的信件
+          return `
+            <svg class="w-full h-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="160" rx="12" fill="#F7E8C4"/>
+              <rect x="85" y="26" width="230" height="86" rx="14" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <!-- 5顆代表泰源五烈士的榮耀星徽 -->
+              <circle cx="128" cy="62" r="13" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2"/>
+              <circle cx="164" cy="62" r="13" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2"/>
+              <circle cx="200" cy="62" r="13" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2"/>
+              <circle cx="236" cy="62" r="13" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2"/>
+              <circle cx="272" cy="62" r="13" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2"/>
+              <text x="200" y="96" text-anchor="middle" fill="#2C2A29" font-size="12" font-weight="900">「一人扛罪・絕不牽連難友與原民青年」</text>
+              <rect x="0" y="132" width="400" height="28" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="200" y="150" text-anchor="middle" fill="#2C2A29" font-size="12" font-weight="900">1970年5月30日・泰源五烈士從容赴義</text>
+            </svg>`;
+        default:
+          // 第7幕：台東泰源山谷 ➔ 跨海客輪 ➔ 綠島綠洲山莊八卦樓
+          return `
+            <svg class="w-full h-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="160" rx="12" fill="#D9E4EC"/>
+              <!-- 左：台東山谷 -->
+              <path d="M15 112L55 52L95 112H15Z" fill="#E2ECE4" stroke="#2C2A29" stroke-width="2.5" stroke-linejoin="round"/>
+              <text x="55" y="125" text-anchor="middle" fill="#2C2A29" font-size="10" font-weight="900">台東泰源</text>
+              <!-- 中：跨海航線與船隻 -->
+              <path d="M105 82H255" stroke="#2C2A29" stroke-width="2.5" stroke-dasharray="5 5"/>
+              <path d="M155 72H205L198 88H162L155 72Z" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2" stroke-linejoin="round"/>
+              <text x="180" y="64" text-anchor="middle" fill="#2C2A29" font-size="10" font-weight="900">1972 跨海移監</text>
+              <!-- 右：綠島八卦樓 -->
+              <polygon points="325,36 355,48 367,78 355,108 325,120 295,108 283,78 295,48" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.5"/>
+              <circle cx="325" cy="78" r="14" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2"/>
+              <line x1="325" y1="36" x2="325" y2="120" stroke="#2C2A29" stroke-width="2"/>
+              <line x1="283" y1="78" x2="367" y2="78" stroke="#2C2A29" stroke-width="2"/>
+              <rect x="0" y="132" width="400" height="28" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+              <text x="200" y="150" text-anchor="middle" fill="#2C2A29" font-size="12" font-weight="900">綠島「綠洲山莊」八卦樓誕生・山海人權的迴響</text>
+            </svg>`;
+      }
+    }
+
+    // =========================================================================
+    // 4. 渲染頂部 7 幕進度軸與主舞台卡片
+    // =========================================================================
+    function renderStepperDots() {
+      const container = document.getElementById('stepperDotsContainer');
+      container.innerHTML = TAIYUAN_STAGES.map((st, idx) => {
+        const isCurrent = idx === currentStepIndex;
+        const isPassed = idx <= maxUnlockedIndex;
+        const dotBg = isCurrent ? 'bg-[#E8998D] scale-125' : (isPassed ? 'bg-[#E2ECE4]' : 'bg-[#FAF7F2]');
+        return `
+          <button onclick="goToStage(${idx})" class="flex flex-col items-center group focus:outline-none">
+            <div class="w-5 h-5 rounded-full border-[2.5px] border-[#2C2A29] ${dotBg} transition-all flex items-center justify-center text-[10px] font-black">
+              ${idx + 1}
+            </div>
+            <span class="mt-1.5 text-[11px] font-bold ${isCurrent ? 'text-[#2C2A29] font-black underline' : 'text-[#6E6A66]'}">
+              ${st.shortName}
+            </span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderStage(index) {
+      stopSpeech();
+      currentStepIndex = index;
+      if (index > maxUnlockedIndex) {
+        maxUnlockedIndex = index;
+      }
+
+      const data = TAIYUAN_STAGES[index];
+
+      // 1. 更新頂部進度文字、填色條與小指標位置
+      document.getElementById('topProgressBadge').textContent = `STAGE ${index + 1} / 7`;
+      const fillPct = (index / (TAIYUAN_STAGES.length - 1)) * 100;
+      document.getElementById('stepperFillBar').style.width = `${fillPct}%`;
+
+      const mascotPositions = ["7.14%", "21.42%", "35.71%", "50%", "64.28%", "78.57%", "92.85%"];
+      const mascot = document.getElementById('stepperMascot');
+      if (mascot) mascot.style.left = mascotPositions[index];
+      document.getElementById('mascotTag').textContent = `第 ${index + 1} 幕`;
+
+      renderStepperDots();
+      renderHistoryBreadcrumbs();
+
+      // 2. 渲染主舞台內容 (Story Stage)
+      const stageContainer = document.getElementById('stageContainer');
+      stageContainer.innerHTML = `
+        <article class="stage-animate space-y-4">
+          
+          <!-- 章節主視覺與標題卡 -->
+          <div class="sketch-box p-4" style="background-color: ${data.themeColor};">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+              <span class="sketch-pill bg-[#2C2A29] text-[#FAF7F2] px-3 py-0.5 scale-text-xs font-black">
+                ${data.actLabel}
+              </span>
+              <!-- 語音朗讀按鈕 -->
+              <button id="ttsBtn" onclick="toggleStageSpeech()" class="sketch-pill sketch-btn bg-[#FAF7F2] px-3 py-1 scale-text-xs font-black text-[#2C2A29] flex items-center gap-1">
+                <span id="ttsIcon">🔊</span>
+                <span id="ttsLabel">語音導讀</span>
+              </button>
+            </div>
+
+            <h2 class="scale-text-xl font-black text-[#2C2A29] mb-2 leading-snug">
+              ${data.title}
+            </h2>
+
+            <!-- 時間與地點膠囊標籤 -->
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              <span class="px-2.5 py-0.5 rounded-lg bg-white/90 border-2 border-[#2C2A29] scale-text-xs font-bold">
+                ${data.timeBadge}
+              </span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-white/90 border-2 border-[#2C2A29] scale-text-xs font-bold">
+                ${data.locationBadge}
+              </span>
+            </div>
+
+            <!-- 情境手繪 SVG 插畫 -->
+            <div class="rounded-xl overflow-hidden border-[2.5px] border-[#2C2A29] bg-[#FAF7F2]">
+              ${getSceneSVG(data.svgScene)}
+            </div>
+          </div>
+
+          <!-- 事件發生過程白話敘事卡 -->
+          <div class="sketch-box bg-white p-4">
+            <div class="flex items-center gap-1.5 mb-2">
+              <span class="text-lg">📖</span>
+              <h3 class="scale-text-base font-black highlight-yellow">事件過程還原</h3>
+            </div>
+            <p class="scale-text-base text-[#2C2A29] whitespace-pre-line font-medium">
+              ${data.narrative}
+            </p>
+          </div>
+
+          <!-- 本幕關鍵人物行動卡 -->
+          <div class="sketch-box bg-white p-4">
+            <h3 class="scale-text-sm font-black text-[#6E6A66] mb-2.5 flex items-center gap-1.5">
+              <span>👤</span>
+              <span>本幕登場關鍵人物與關係</span>
+            </h3>
+            <div class="grid grid-cols-1 gap-2">
+              ${data.characters.map(ch => `
+                <div class="p-3 rounded-xl border-2 border-[#2C2A29] flex items-start gap-2.5" style="background-color: ${ch.color}66;">
+                  <span class="px-2 py-0.5 rounded-md bg-[#2C2A29] text-[#FAF7F2] scale-text-xs font-black shrink-0 mt-0.5">
+                    ${ch.name}
+                  </span>
+                  <span class="scale-text-xs font-bold text-[#2C2A29]">
+                    ${ch.role}
+                  </span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- 第 3 幕專屬：互動推演選擇題 / 其他幕：史料與歷史關鍵夾 -->
+          ${data.interactiveChoice ? renderInteractiveChoiceHTML(data.interactiveChoice) : ''}
+          ${data.archiveBox ? `
+            <div class="archive-paper p-3.5">
+              <h4 class="scale-text-sm font-black text-[#2C2A29] mb-1">${data.archiveBox.title}</h4>
+              <p class="scale-text-xs font-bold text-[#4A4745] leading-relaxed">${data.archiveBox.content}</p>
+            </div>
+          ` : ''}
+
+          <!-- 對應旅遊行程景點提示卡 -->
+          <div class="sketch-box bg-[#E2ECE4] p-3.5 flex items-start gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#FAF7F2] border-2 border-[#2C2A29] flex items-center justify-center text-lg shrink-0">
+              🗺️
+            </div>
+            <div>
+              <span class="inline-block px-2 py-0.5 rounded bg-[#F7E8C4] border border-[#2C2A29] scale-text-xs font-black mb-1">
+                對應四日慢旅行程：${data.tourSpotHint.day}
+              </span>
+              <p class="scale-text-xs font-bold text-[#2C2A29] leading-relaxed">
+                ${data.tourSpotHint.desc}
+              </p>
+            </div>
+          </div>
+
+          <!-- 第 7 幕終章專屬：四天三夜行程與泰源事件總串聯全覽表 -->
+          ${data.isFinalStage ? renderFinalSummaryCardHTML() : ''}
+
+        </article>
+      `;
+
+      // 3. 更新底部推進按鈕狀態
+      updateFooterButtons();
+    }
+
+    // 第 3 幕互動推演小機關 HTML
+    function renderInteractiveChoiceHTML(choice) {
+      return `
+        <div class="sketch-box bg-[#FFF9EB] p-4">
+          <p class="scale-text-sm font-black text-[#2C2A29] mb-2.5">${choice.question}</p>
+          <div class="space-y-2">
+            ${choice.options.map((opt, idx) => `
+              <button id="stageChoiceBtn-${idx}" onclick="revealStageChoice(${idx}, ${choice.correctIndex})" class="w-full text-left p-2.5 rounded-xl border-2 border-[#2C2A29] bg-white hover:bg-[#FAF7F2] scale-text-xs font-bold text-[#2C2A29] transition-all">
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+          <div id="stageChoiceRevealBox" class="mt-3 p-3 rounded-xl bg-[#E2ECE4] border-2 border-[#2C2A29] hidden">
+            <p class="scale-text-xs font-bold text-[#2C2A29] leading-relaxed">${choice.revealText}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function revealStageChoice(selectedIdx, correctIdx) {
+      for (let i = 0; i < 3; i++) {
+        const btn = document.getElementById(`stageChoiceBtn-${i}`);
+        if (!btn) continue;
+        if (i === correctIdx) {
+          btn.className = "w-full text-left p-2.5 rounded-xl border-2 border-[#2C2A29] bg-[#CBE4D6] scale-text-xs font-black text-[#2C2A29]";
+        } else if (i === selectedIdx) {
+          btn.className = "w-full text-left p-2.5 rounded-xl border-2 border-[#2C2A29] bg-[#F5C2B8] scale-text-xs font-bold text-[#2C2A29]";
+        }
+      }
+      const revealBox = document.getElementById('stageChoiceRevealBox');
+      if (revealBox) revealBox.classList.remove('hidden');
+    }
+
+    // 第 7 幕結束時的「台東到綠島四天三夜行程總對照卡」
+    function renderFinalSummaryCardHTML() {
+      return `
+        <div class="sketch-box bg-[#F7E8C4] p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="scale-text-base font-black highlight-coral">🎉 完整解鎖！跟著泰源事件去旅行（4天3夜路線圖）</h3>
+          </div>
+          <p class="scale-text-xs font-bold text-[#4A4745]">
+            現在你已經看懂了「泰源事件」的完整脈絡，這就是我們帶爸媽從台東玩到綠島的四日慢旅設計核心：
+          </p>
+          <div class="space-y-2 scale-text-xs">
+            <div class="p-2.5 rounded-xl bg-white border-2 border-[#2C2A29]">
+              <strong class="text-[#2C2A29]">📍 Day 1【起因・台東市區與海濱】</strong>：認識台東阿美族文化與在地青年的生活輪廓（對應第 1 幕：山谷結盟背景）。
+            </div>
+            <div class="p-2.5 rounded-xl bg-white border-2 border-[#2C2A29]">
+              <strong class="text-[#B83B2B]">📍 Day 2【爆發・都蘭、舊東河橋、泰源幽谷】</strong>：實地踏訪泰源感訓監獄外圍與東海岸山林（對應第 2～5 幕：大年初三突圍與山林搜捕）。
+            </div>
+            <div class="p-2.5 rounded-xl bg-white border-2 border-[#2C2A29]">
+              <strong class="text-[#2B6CB0]">📍 Day 3【後果・富岡漁港跨海 ➔ 綠島綠洲山莊】</strong>：見證當局因恐懼泰源起義而緊急興建的綠島封閉式八卦樓監獄（對應第 7 幕：跨海移監）。
+            </div>
+            <div class="p-2.5 rounded-xl bg-white border-2 border-[#2C2A29]">
+              <strong class="text-[#4A7C59]">📍 Day 4【和解・綠島垂淚碑與燈塔看海】</strong>：在柏楊碑文前體會天下父母心，吹著自由海風平安賦歸。
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // =========================================================================
+    // 5. 推進控制邏輯 (下一幕 / 上一幕 / 跳轉章節)
+    // =========================================================================
+    function nextStage() {
+      if (currentStepIndex < TAIYUAN_STAGES.length - 1) {
+        renderStage(currentStepIndex + 1);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        // 在第 7 幕點擊時重新回到第 1 幕
+        renderStage(0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function prevStage() {
+      if (currentStepIndex > 0) {
+        renderStage(currentStepIndex - 1);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function goToStage(index) {
+      renderStage(index);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateFooterButtons() {
+      const prevBtn = document.getElementById('prevStageBtn');
+      const nextBtn = document.getElementById('nextStageBtn');
+      const nextBtnText = document.getElementById('nextStageBtnText');
+
+      prevBtn.disabled = currentStepIndex === 0;
+
+      if (currentStepIndex < TAIYUAN_STAGES.length - 1) {
+        const nextStepTitle = TAIYUAN_STAGES[currentStepIndex + 1].shortName;
+        nextBtn.className = "sketch-box sketch-btn flex-1 bg-[#E8998D] py-3 px-4 font-black scale-text-base text-[#2C2A29] flex items-center justify-center gap-2";
+        nextBtnText.textContent = `👉 推進下一幕：${nextStepTitle} (${currentStepIndex + 1}/7)`;
+      } else {
+        nextBtn.className = "sketch-box sketch-btn flex-1 bg-[#E2ECE4] py-3 px-4 font-black scale-text-base text-[#2C2A29] flex items-center justify-center gap-2";
+        nextBtnText.textContent = `🔄 已讀完第 7 幕・從頭回顧 (7/7)`;
+      }
+    }
+
+    function renderHistoryBreadcrumbs() {
+      const countLabel = document.getElementById('unlockedCountLabel');
+      countLabel.textContent = `已解鎖 ${maxUnlockedIndex + 1} / 7`;
+
+      const listEl = document.getElementById('historyBreadcrumbList');
+      listEl.innerHTML = TAIYUAN_STAGES.map((st, idx) => {
+        const isUnlocked = idx <= maxUnlockedIndex;
+        const isCurrent = idx === currentStepIndex;
+        if (!isUnlocked) {
+          return `
+            <span class="px-2.5 py-1 rounded-lg border border-dashed border-[#2C2A29]/40 scale-text-xs text-[#8C8680] select-none">
+              🔒 第 ${idx + 1} 幕
+            </span>
+          `;
+        }
+        return `
+          <button onclick="goToStage(${idx})" class="px-2.5 py-1 rounded-lg border-2 border-[#2C2A29] scale-text-xs font-bold transition-all ${isCurrent ? 'bg-[#E8998D] font-black shadow-[2px_2px_0_#2C2A29]' : 'bg-white hover:bg-[#F7E8C4]'}">
+            ${idx + 1}. ${st.shortName}
+          </button>
+        `;
+      }).join('');
+    }
+
+    // =========================================================================
+    // 6. Web Speech API 語音朗讀導覽 & 大字模式 & 人物關係彈窗
+    // =========================================================================
+    function toggleStageSpeech() {
+      if (!('speechSynthesis' in window)) {
+        return;
+      }
+
+      if (isSpeaking) {
+        stopSpeech();
+        return;
+      }
+
+      const data = TAIYUAN_STAGES[currentStepIndex];
+      window.speechSynthesis.cancel();
+
+      const textToRead = `${data.actLabel}，${data.title}。${data.narrative.replace(/\n/g, ' ')}`;
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      utterance.lang = 'zh-TW';
+      utterance.rate = 0.92;
+
+      utterance.onstart = () => {
+        isSpeaking = true;
+        updateSpeechButtonUI(true);
+      };
+      utterance.onend = () => {
+        isSpeaking = false;
+        updateSpeechButtonUI(false);
+      };
+      utterance.onerror = () => {
+        isSpeaking = false;
+        updateSpeechButtonUI(false);
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      isSpeaking = false;
+      updateSpeechButtonUI(false);
+    }
+
+    function updateSpeechButtonUI(speaking) {
+      const btn = document.getElementById('ttsBtn');
+      const icon = document.getElementById('ttsIcon');
+      const label = document.getElementById('ttsLabel');
+      if (!btn) return;
+
+      if (speaking) {
+        btn.className = "sketch-pill sketch-btn bg-[#F7E8C4] px-3 py-1 scale-text-xs font-black text-[#2C2A29] flex items-center gap-1 speaking-active";
+        icon.textContent = "⏹️";
+        label.textContent = "停止朗讀";
+      } else {
+        btn.className = "sketch-pill sketch-btn bg-[#FAF7F2] px-3 py-1 scale-text-xs font-black text-[#2C2A29] flex items-center gap-1";
+        icon.textContent = "🔊";
+        label.textContent = "語音導讀";
+      }
+    }
+
+    function toggleLargeText() {
+      isLargeText = !isLargeText;
+      document.body.classList.toggle('large-text-mode', isLargeText);
+      const btn = document.getElementById('largeTextBtn');
+      const label = document.getElementById('largeTextLabel');
+      if (isLargeText) {
+        btn.classList.replace('bg-[#E2ECE4]', 'bg-[#E8998D]');
+        label.textContent = "標準字";
+      } else {
+        btn.classList.replace('bg-[#E8998D]', 'bg-[#E2ECE4]');
+        label.textContent = "大字";
+      }
+    }
+
+    function renderCastModalContent() {
+      const container = document.getElementById('castModalContent');
+      container.innerHTML = CAST_RELATIONS.map(item => `
+        <div class="p-3.5 rounded-2xl border-[2.5px] border-[#2C2A29] bg-white">
+          <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+            <h3 class="scale-text-sm font-black text-[#2C2A29]">${item.group}</h3>
+            <span class="px-2 py-0.5 rounded-md border border-[#2C2A29] scale-text-xs font-bold" style="background-color: ${item.bg};">
+              ${item.badge}
+            </span>
+          </div>
+          <p class="scale-text-xs text-[#4A4745] font-medium leading-relaxed">
+            ${item.desc}
+          </p>
+        </div>
+      `).join('');
+    }
+
+    function openCastModal() {
+      document.getElementById('castModalBackdrop').classList.remove('hidden');
+    }
+
+    function closeCastModal(e) {
+      if (!e || e.target.id === 'castModalBackdrop') {
+        document.getElementById('castModalBackdrop').classList.add('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
